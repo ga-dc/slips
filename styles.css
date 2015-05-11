@@ -1,0 +1,165 @@
+*
+{
+  margin:0;
+  border:0;
+  padding:0;
+  box-sizing:border-box;
+  font-size:inherit;
+  font-family:inherit;
+  background-color:transparent;
+}
+body,html
+{
+  font-family:"Futura";
+  color:white;
+  font-size:0;
+  position:relative;
+  width:100%;
+  height:100%;
+}
+div
+{
+  position:relative;
+}
+
+h1, #currentSlip
+{
+  font-size:72px;
+  text-align:center;
+}
+textarea,input,button,label,ul
+{
+  font-size:12px;
+  color:white;
+}
+a,button,label
+{
+  cursor:pointer;
+}
+button,label
+{
+  display:block;
+  text-align:center;
+}
+button,label,input,textarea
+{
+  padding:10px;
+  border-radius:5px;
+}
+input[type="checkbox"]
+{
+  display:block;
+  width:1px;
+  height:1px;
+  padding:0;
+  opacity:0.01;
+  position:absolute;
+}
+
+body
+{
+  background-color:#000;
+}
+#side
+{
+  position:absolute;
+  top:0;
+  left:0;
+  width:260px;
+  z-index:99;
+  min-height:100%;
+  background-color:#123;
+  padding:0px 10px;
+  padding-left:60px;
+}
+#side>div:nth-of-type(1),
+#side>div:nth-of-type(2)
+{
+  height:180px;
+}
+textarea
+{
+  height:100%;
+}
+textarea, button, label
+{
+  display:block;
+  width:100%;
+  resize:none;
+  margin-top:10px;
+}
+textarea:focus,
+button:focus
+{
+  outline:0;
+}
+#side a,
+textarea, button, label
+{
+  background-color:#192939;
+}
+#side a:hover,
+button:hover,
+input:checked+label
+{
+  background-color:#345;
+}
+
+#side a
+{
+  display:block;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:100;
+  height:100%;
+  width:50px;
+}
+
+#side
+{
+  left:-260px;
+}
+#side:target
+{
+  left:0;
+}
+#side a#toggleOff,
+#side:target a#toggleOn
+{
+  display:none;
+}
+#side:target a#toggleOff
+{
+  display:block;
+}
+
+#display
+{
+  cursor:pointer;
+  margin:0 auto;
+  max-width:1000px;
+}
+#display:hover
+{
+  color:#ccf;
+}
+#currentSlip
+{
+  border:1px dashed #192939;
+  border-width:5px 0;
+  padding:.3em 2em;
+  margin:.3em 0;
+}
+
+footer
+{
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+}
+#prev
+{
+  border-radius:0;
+}

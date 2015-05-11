@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slipz</title>
+    <meta charset="utf-8" />
+    <script src="classes.json"></script>
+    <script src="slips.json"></script>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body onload="Controller();">
+
+    <header id="side">
+      <a id="toggleOn" href="#side"></a>
+      <a id="toggleOff" href="#"></a>
+      <div>
+        <ul id="students_select">
+        </ul>
+        <textarea id="students" placeholder="Students"></textarea>
+      </div>
+      <div>
+        <ul id="slips_select">
+        </ul>
+        <textarea id="slips" placeholder="Slips (CSV)"></textarea>
+      </div>
+      <input type="checkbox" id="rand_slips" /><label for="rand_slips">Randomize slips order</label>
+      <input type="checkbox" id="rand_students" /><label for="rand_students">Randomize student order</label>
+      <button id="reset" type="button">Reset</button>
+    </header>
+
+    <main id="display">
+      <h1><span id="currentName"></span>:</h1>
+      <p id="currentSlip"></p>
+    </main>
+
+    <footer>
+      <button id="prev" type="button">Previous</button>
+    </footer>
+
+  </body>
+</html>
