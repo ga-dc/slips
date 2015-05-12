@@ -14,22 +14,19 @@
       <a id="toggleOn" href="#side"></a>
       <a id="toggleOff" href="#"></a>
       <div>
-        <ul id="students_select">
-        </ul>
-        <textarea id="students" placeholder="Students"></textarea>
+        <ul id="students_select" class="select"></ul>
       </div>
       <div>
-        <ul id="slips_select">
-        </ul>
-        <textarea id="slips" placeholder="Slips (CSV)"></textarea>
+        <ul id="slips_select" class="select"></ul>
       </div>
-      <input type="checkbox" id="rand_slips" /><label for="rand_slips">Randomize slips order</label>
-      <input type="checkbox" id="rand_students" /><label for="rand_students">Randomize student order</label>
-      <button id="reset" type="button">Reset</button>
+      <div><input type="checkbox" id="rand_slips" /><label for="rand_slips">Randomize slips order</label></div>
+      <div><input type="checkbox" id="rand_students" /><label for="rand_students">Randomize student order</label></div>
+      <div><button id="reset" type="button">Reset</button></div>
     </header>
 
     <main id="display">
       <h1><span id="currentName"></span>:</h1>
+      <p id="amntLeft"></p>
       <p id="currentSlip"></p>
     </main>
 

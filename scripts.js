@@ -1,118 +1,131 @@
-function Controller(){
+function shuffle(array){
+  var currentIndex = array.length;
+  var randomIndex;
+  var temporaryValue;
+  while(currentIndex > 0){
+    randomIndex  = Math.floor(Math.random() * currentIndex);
+    currentIndex = currentIndex - 1;
 
-  function addOptions(element, nodes){
-    for(var x = 0; x < nodes.length; x++){
-      element.appendChild(nodes[x]);
+    temporaryValue       = array[currentIndex];
+    array[currentIndex]  = array[randomIndex];
+    array[randomIndex]   = temporaryValue;
+  }
+  return array;
+}
+
+function buildList(name, el, data){
+  isChecked = false;
+  for(var itemName in data){
+    var option = document.createElement("LI");
+
+    var input = document.createElement("INPUT");
+    input.value = itemName;
+    input.type = "radio";
+    input.id = itemName;
+    input.name = name;
+    if(!isChecked){
+      input.checked = true;
+      isChecked = true;
+    }
+
+    var label = document.createElement("LABEL");
+    label.htmlFor = itemName; 
+    label.innerText = itemName;
+
+    option.appendChild(input);
+    option.appendChild(label);
+    el.appendChild(option);
+  }
+}
+
+function Slips(){
+
+  var c = this;
+
+  this.data = {
+    students: data_students,
+    slips: data_slips,
+    current: {
+      index: 0,
+      student: function(){
+        return c.data.students[c.data.current.index]
+      },
+      slip: function(){
+        return c.data.slips[c.data.current.index]
+      }
     }
   }
 
-  function getOptions(name, data){
-    var list = document.createElement("UL");
-    for(var itemName in data){
-      var option = document.createElement("LI");
-
-      var input = document.createElement("INPUT");
-      input.value = itemName;
-      input.type = "radio";
-      input.id = itemName;
-      input.name = name;
-
-      var label = document.createElement("LABEL");
-      label.for = itemName; 
-      label.innerText = itemName;
-
-      option.appendChild(input);
-      option.appendChild(label);
-      list.appendChild(option);
-    }
-    return list;
-  }
-
-  function shuffle(array){
-    var currentIndex = array.length;
-    var randomIndex;
-    var temporaryValue;
-    while(currentIndex > 0){
-      randomIndex  = Math.floor(Math.random() * currentIndex);
-      currentIndex = currentIndex - 1;
-
-      temporaryValue       = array[currentIndex];
-      array[currentIndex]  = array[randomIndex];
-      array[randomIndex]   = temporaryValue;
-    }
-    return array;
-  }
-
-  function get(){
-    students.names = document.getElementById("students").value.split("\n");
-    slips = document.getElementById("slips").value.split("\n");
-    if(document.getElementById("rand_students").checked){
-      students.names = shuffle(students.names);
-    }
-    if(document.getElementById("rand_slips").checked){
-      slips = shuffle(slips);
+  this.view = {
+    current: {
+      student: document.getElementById("currentName"),
+      slip: document.getElementById("currentSlip")
+    },
+    select: {
+      students: document.getElementById("students_select"),
+      slips: document.getElementById("slips_select")
+    },
+    butt: {
+      reset: document.getElementById("reset"),
+      next: document.querySelector("main"),
+      prev: document.getElementById("prev")
+    },
+    random: {
+      students: document.getElementById("rand_students"),
+      slips: document.getElementById("rand_slips")
+    },
+    amount: {
+      left: document.getElementById("amntLeft")
+    },
+    place: function(){
+      currentName.innerText = c.data.current.student(); 
+      currentSlip.innerText = c.data.current.slip();
+      c.view.amount.left.innerText = c.data.students.length - c.data.current.index;
+      c.data.current.index++;
+    },
+    load: function(){
+      var cohort = document.querySelector("#students_select input:checked");
+      var topic = document.querySelector("#slips_select input:checked");
+      c.data.students = data_students[cohort.value].sort();
+      c.data.slips = data_slips[topic.value].sort();
+      if(c.view.random.students.checked){
+        c.data.students = shuffle(c.data.students);
+      }
+      if(c.view.random.slips.checked){
+        c.data.slips = shuffle(c.data.slips);
+      }
     }
   }
 
-  function allocate(){
-    for(var x = 0; x < students.names.length; x++){
-      students.all.push({
-        name: students.names[x],
-        index: x,
-        slip: slips[x]   
-      });              
+  this.events = {
+    next: function(){
+      if(c.data.current.index < c.data.students.length){
+        c.view.place();
+      }
+    },
+    prev: function(){
+      if(c.data.current.index > 1){
+        c.data.current.index = c.data.current.index - 2;
+        c.view.place();
+      }
+    },
+    reset: function(){
+      c.data.current.index = 0;
+      c.view.load();
+      c.view.place();
     }
   }
 
-  function next(){
-    if(students.currentIndex < students.all.length){
-      place();
-    }
-  }
+  this.view.butt.next.addEventListener("click", this.events.next);
+  this.view.butt.prev.addEventListener("click", this.events.prev);
+  this.view.butt.reset.addEventListener("click", this.events.reset);
 
-  function prev(){
-    if(students.currentIndex > 1){
-      students.currentIndex = students.currentIndex - 2;
-      place();
-    }
-  }
-
-  function place(){
-    var student = students.all[students.currentIndex];
-    currentName.innerText = student.name;
-    currentSlip.innerText = student.slip;
-    students.currentIndex++;
-  }
-
-  function reset(){
-    used = [];
-    get();
-    allocate();
-    next();
-  }
-
-  var students = {
-    all: [],
-    names: [],
-    currentIndex: 0
-  }
-  var slips = [];
-
-  var currentName = document.getElementById("currentName"); 
-  var currentPrompt = document.getElementById("currentSlip");
-  var studentsSelect = document.getElementById("students_select");
-  var slipsSelect = document.getElementById("slips_select");
-
-  document.getElementById("reset").addEventListener("click", reset);
-  document.querySelector("main").addEventListener("click", next);
-  document.getElementById("prev").addEventListener("click", prev);
-
-  addOptions(studentsSelect, getOptions("classes_select", data_classes).childNodes);
-  addOptions(slipsSelect, getOptions("slips_select", data_slips).childNodes);
-  reset();
-
+  buildList("select_students", this.view.select.students, this.data.students);
+  buildList("select_slips", this.view.select.slips, this.data.slips);
+  this.view.load();
+  this.view.place();
 }
 
 window.onload = function(){
-  new Controller();
+  var slips = new Slips();
 }

@@ -24,7 +24,7 @@ var data_slips = {
     "Differentiate between function declarations and expressions.",
     "Explain the difference between referencing and invoking a function.",
     "Explain the concept of events and event driven programming.",
-    "Explain the concept of a <strike>doge</strike> 'callback' function.",
+    "Explain the concept of a 'callback' function.",
     "Explain the difference between synchronous and asynchronous execution."
   ]
 }
