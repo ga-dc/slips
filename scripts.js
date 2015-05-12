@@ -1,27 +1,6 @@
 function Controller(){
 
-  var students = {
-    all: [],
-    names: [],
-    currentIndex: 0
-  }
-  var slips = [];
-
-  var currentName = document.getElementById("currentName"); 
-  var currentPrompt = document.getElementById("currentSlip");
-  var studentsSelect = document.getElementById("students_select");
-  var slipsSelect = document.getElementById("slips_select");
-
-  document.getElementById("reset").addEventListener("click", reset);
-  document.querySelector("main").addEventListener("click", next);
-  document.getElementById("prev").addEventListener("click", prev);
-
-  addOptions(studentsSelect, getOptions("classes_select", data_classes).childNodes);
-  addOptions(slipsSelect, getOptions("slips_select", data_slips).childNodes);
-  reset();
-
   function addOptions(element, nodes){
-    console.log(nodes);
     for(var x = 0; x < nodes.length; x++){
       element.appendChild(nodes[x]);
     }
@@ -111,4 +90,29 @@ function Controller(){
     allocate();
     next();
   }
+
+  var students = {
+    all: [],
+    names: [],
+    currentIndex: 0
+  }
+  var slips = [];
+
+  var currentName = document.getElementById("currentName"); 
+  var currentPrompt = document.getElementById("currentSlip");
+  var studentsSelect = document.getElementById("students_select");
+  var slipsSelect = document.getElementById("slips_select");
+
+  document.getElementById("reset").addEventListener("click", reset);
+  document.querySelector("main").addEventListener("click", next);
+  document.getElementById("prev").addEventListener("click", prev);
+
+  addOptions(studentsSelect, getOptions("classes_select", data_classes).childNodes);
+  addOptions(slipsSelect, getOptions("slips_select", data_slips).childNodes);
+  reset();
+
+}
+
+window.onload = function(){
+  new Controller();
 }
