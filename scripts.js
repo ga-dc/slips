@@ -45,6 +45,7 @@ function Slips(){
   this.data = {
     students: data_students,
     slips: data_slips,
+    gone: [],
     current: {
       index: 0,
       student: function(){
@@ -77,10 +78,18 @@ function Slips(){
     amount: {
       left: document.getElementById("amntLeft")
     },
+    gone: {
+      el: document.getElementById("gone"),
+      mark: function(student){
+        c.data.gone.push(student);
+        c.view.gone.el.innerText = c.data.gone.join("\n");
+      }
+    },
     place: function(){
       currentName.innerText = c.data.current.student(); 
       currentSlip.innerText = c.data.current.slip();
       c.view.amount.left.innerText = c.data.students.length - c.data.current.index;
+      c.view.gone.mark(c.data.current.student());
       c.data.current.index++;
     },
     load: function(){
@@ -106,6 +115,7 @@ function Slips(){
     prev: function(){
       if(c.data.current.index > 1){
         c.data.current.index = c.data.current.index - 2;
+        c.data.used = c.data.gone.splice(-2, 2);
         c.view.place();
       }
     },

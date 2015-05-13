@@ -11,17 +11,7 @@
   <body>
 
     <header id="side">
-      <a id="toggleOn" href="#side"></a>
-      <a id="toggleOff" href="#"></a>
-      <div>
-        <ul id="students_select" class="select"></ul>
-      </div>
-      <div>
-        <ul id="slips_select" class="select"></ul>
-      </div>
-      <div><input type="checkbox" id="rand_slips" /><label for="rand_slips">Randomize slips order</label></div>
-      <div><input type="checkbox" id="rand_students" /><label for="rand_students">Randomize student order</label></div>
-      <div><button id="reset" type="button">Reset</button></div>
+      <button id="prev" type="button"><span id="gone"></span></button>
     </header>
 
     <main id="display">
@@ -31,7 +21,15 @@
     </main>
 
     <footer>
-      <button id="prev" type="button">Previous</button>
+      <div>
+        <ul id="students_select" class="select"></ul>
+      </div>
+      <div>
+        <ul id="slips_select" class="select"></ul>
+      </div>
+      <div><input type="checkbox" id="rand_slips" /><label for="rand_slips">Randomize slips order</label></div>
+      <div><input type="checkbox" id="rand_students" /><label for="rand_students">Randomize student order</label></div>
+      <div><button id="reset" type="button">Reset</button></div>
     </footer>
 
   </body>
