@@ -136,6 +136,4 @@ function Slips(){
   this.view.place();
 }
 
-window.onload = function(){
-  var slips = new Slips();
-}
+window.onload = Slips;
