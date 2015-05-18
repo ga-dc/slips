@@ -1,5 +1,5 @@
 var data_students = {
-  milk: [
+  "Milk": [
     "Aaron P",
     "Adrian M",
     "Ali T",
@@ -22,7 +22,7 @@ var data_students = {
     "Tamara P",
     "Toby S",
   ],
-  cookies: [
+  "Cookies": [
     "Alif C",
     "Allyson L",
     "Biboy P",
