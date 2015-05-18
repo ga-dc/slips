@@ -24,7 +24,7 @@ var data_slips = {
     "Distinguish between a route and a path",
     "Define routes using Sinatra",
     "List at least 3 methods added to a class when it inherits from ActiveRecord::Base.",
-    "Define routes with URL parameters and access those parameters",
+    "Define routes with URL parameters and access those parameters"
   ],
   "Ruby Basics": [
     "What are Ruby's 5 main data types?",
@@ -50,8 +50,8 @@ var data_slips = {
     "Write a 'puts' statement on the board, and describe its input, output, and side effects.",
     "What's the difference between 'git commit' and 'git push'?",
     "'I'm the world's #0 programmer!' Explain the joke.",
-    "What's the difference between an index and a key?" 
-    "List two Ruby Enumerators and give their purpose.",
+    "What's the difference between an index and a key?",
+    "List two Ruby Enumerators and give their purpose."
   ],
   "HTML and CSS": [
     "Explain what HTML is and what problem it solves",
@@ -77,6 +77,6 @@ var data_slips = {
   "HTTP": [
     "Define the purpose of the 'action' and 'method' attributes of a form.",
     "List the HTTP request verbs",
-    "Explain what REST is and why we use it",
+    "Explain what REST is and why we use it"
   ]
 }
