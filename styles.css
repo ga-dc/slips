@@ -8,6 +8,10 @@
   font-family:inherit;
   background-color:transparent;
 }
+*:focus
+{
+  outline:0;
+}
 body,html
 {
   font-family:"Futura";
@@ -38,13 +42,9 @@ a,button,label
   cursor:pointer;
   text-decoration:none;
 }
-button,label
+button,label,input[type=text]
 {
   display:block;
-  text-align:center;
-}
-button,label,input,textarea
-{
   padding:10px;
 }
 input[type="checkbox"],
@@ -79,9 +79,10 @@ button:focus
   outline:0;
 }
 .select input:checked + label,
-textarea, button, label
+input[type=text], textarea, button, label
 {
   background-color:#192939;
+  text-align:center;
 }
 button:hover,
 label:hover,
@@ -173,7 +174,19 @@ footer,
 footer>div
 {
   display:inline-block;
-  width:16.666%;
+  width:14.28%;
   height:100%;
   vertical-align:bottom;
+}
+.run
+{
+  background-color:#300;
+}
+.run:hover
+{
+  background-color:red;
+}
+.overtime
+{
+  color:yellow;
 }

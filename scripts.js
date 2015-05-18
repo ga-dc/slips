@@ -45,7 +45,6 @@ function Slips(){
   this.data = {
     students: data_students,
     slips: data_slips,
-    gone: [],
     current: {
       index: 0,
       student: function(){
@@ -63,18 +62,19 @@ function Slips(){
       student: document.getElementById("currentName"),
       slip: document.getElementById("currentSlip")
     },
-    select: {
-      students: document.getElementById("students_select"),
-      slips: document.getElementById("slips_select")
-    },
-    butt: {
+    input: {
       reset: document.getElementById("reset"),
       next: document.getElementById("next"),
-      prev: document.getElementById("prev")
-    },
-    random: {
-      students: document.getElementById("rand_students"),
-      slips: document.getElementById("rand_slips")
+      prev: document.getElementById("prev"),
+      time: document.getElementById("time"),
+      select: {
+        students: document.getElementById("students_select"),
+        slips: document.getElementById("slips_select")
+      },
+      random: {
+        students: document.getElementById("rand_students"),
+        slips: document.getElementById("rand_slips")
+      }
     },
     gone: {
       el: document.getElementById("gone"),
@@ -100,10 +100,10 @@ function Slips(){
       var topic = document.querySelector("#slips_select input:checked");
       c.data.students = data_students[cohort.value].sort();
       c.data.slips = data_slips[topic.value].sort();
-      if(c.view.random.students.checked){
+      if(c.view.input.random.students.checked){
         c.data.students = shuffle(c.data.students);
       }
-      if(c.view.random.slips.checked){
+      if(c.view.input.random.slips.checked){
         c.data.slips = shuffle(c.data.slips);
       }
     }
@@ -111,8 +111,13 @@ function Slips(){
 
   this.events = {
     next: function(){
+      clearTimeout(c.events.timer);
+      c.view.current.slip.className = "";
       if(c.data.current.index < c.data.students.length){
         c.view.place();
+      }
+      if(c.view.input.time.value){
+        setTimeout(c.events.timer, c.view.input.time.value * 1000);
       }
     },
     prev: function(){
@@ -123,18 +128,20 @@ function Slips(){
     },
     reset: function(){
       c.data.current.index = 0;
-      c.data.gone = [];
       c.view.load();
-      c.view.place();
+      c.events.next();
+    },
+    timer: function(){
+      c.view.current.slip.className = "overtime";
     }
   }
 
-  this.view.butt.next.addEventListener("click", this.events.next);
-  this.view.butt.prev.addEventListener("click", this.events.prev);
-  this.view.butt.reset.addEventListener("click", this.events.reset);
+  this.view.input.next.addEventListener("click", this.events.next);
+  this.view.input.prev.addEventListener("click", this.events.prev);
+  this.view.input.reset.addEventListener("click", this.events.reset);
 
-  buildList("select_students", this.view.select.students, this.data.students);
-  buildList("select_slips", this.view.select.slips, this.data.slips);
+  buildList("select_students", this.view.input.select.students, this.data.students);
+  buildList("select_slips", this.view.input.select.slips, this.data.slips);
   this.view.load();
   this.view.place();
 }
