@@ -68,28 +68,30 @@ function Slips(){
     },
     butt: {
       reset: document.getElementById("reset"),
-      next: document.querySelector("main"),
+      next: document.getElementById("next"),
       prev: document.getElementById("prev")
     },
     random: {
       students: document.getElementById("rand_students"),
       slips: document.getElementById("rand_slips")
     },
-    amount: {
-      left: document.getElementById("amntLeft")
-    },
     gone: {
       el: document.getElementById("gone"),
-      add: function(student){
-        c.data.gone.push(student);
-        c.view.gone.el.innerText = c.data.gone.join("\n");
+      update: function(){
+        c.view.gone.el.innerText = c.data.students.slice(0, c.data.current.index).join("\n");
+      }
+    },
+    left: {
+      el: document.getElementById("left"),
+      update: function(){
+        c.view.left.el.innerText = c.data.students.slice(c.data.current.index + 1).join("\n");
       }
     },
     place: function(){
       currentName.innerText = c.data.current.student(); 
       currentSlip.innerText = c.data.current.slip();
-      c.view.amount.left.innerText = c.data.students.length - c.data.current.index;
-      c.view.gone.add(c.data.current.student());
+      c.view.gone.update();
+      c.view.left.update();
       c.data.current.index++;
     },
     load: function(){
@@ -115,7 +117,6 @@ function Slips(){
     prev: function(){
       if(c.data.current.index > 1){
         c.data.current.index = c.data.current.index - 2;
-        c.data.gone.splice(-2, 2);
         c.view.place();
       }
     },
