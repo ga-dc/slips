@@ -49,10 +49,11 @@ function Slips(){
     current: {
       index: 0,
       student: function(){
-        return c.data.students[c.data.current.index]
+        return c.data.students[c.data.current.index];
       },
       slip: function(){
-        return c.data.slips[c.data.current.index]
+        var index = c.data.current.index - (c.data.slips.length * Math.floor(c.data.current.index / c.data.slips.length));
+        return c.data.slips[index];
       }
     }
   }
