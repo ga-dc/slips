@@ -188,5 +188,7 @@ footer>div
 }
 .overtime
 {
-  color:yellow;
+  font-size:64px !important;
+  font-family:"Comic Sans MS";
+  color:#fbb;
 }
