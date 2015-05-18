@@ -80,7 +80,7 @@ function Slips(){
     },
     gone: {
       el: document.getElementById("gone"),
-      mark: function(student){
+      add: function(student){
         c.data.gone.push(student);
         c.view.gone.el.innerText = c.data.gone.join("\n");
       }
@@ -89,7 +89,7 @@ function Slips(){
       currentName.innerText = c.data.current.student(); 
       currentSlip.innerText = c.data.current.slip();
       c.view.amount.left.innerText = c.data.students.length - c.data.current.index;
-      c.view.gone.mark(c.data.current.student());
+      c.view.gone.add(c.data.current.student());
       c.data.current.index++;
     },
     load: function(){
@@ -115,12 +115,13 @@ function Slips(){
     prev: function(){
       if(c.data.current.index > 1){
         c.data.current.index = c.data.current.index - 2;
-        c.data.used = c.data.gone.splice(-2, 2);
+        c.data.gone.splice(-2, 2);
         c.view.place();
       }
     },
     reset: function(){
       c.data.current.index = 0;
+      c.data.gone = [];
       c.view.load();
       c.view.place();
     }
