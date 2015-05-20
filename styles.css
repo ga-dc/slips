@@ -78,6 +78,7 @@ button:focus
 {
   outline:0;
 }
+footer,
 .select input:checked + label,
 input[type=text], textarea, button, label
 {
