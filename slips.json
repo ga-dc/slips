@@ -5,7 +5,7 @@ var data_slips = {
     "Write a JavaScript Object literal with at least one property and one method (e.g. a person).",
     "Differentiate between function declarations and expressions.",
     "Explain the difference between referencing and invoking a function.",
-    "What are Javascript's 4 primitive data types?",
+    "What are Javascript's 5 primitive data types?",
     "What are the two types of collections in Javascript, and what are the differences between them?",
     "Describe the difference between a fork and a branch.",
     "What's the difference between true / false and truthy / falsy?",
