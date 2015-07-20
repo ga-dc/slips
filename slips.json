@@ -54,7 +54,12 @@ var data_slips = {
     "Write a 'puts' statement on the board, and describe its input, output, and side effects.",
     "What's the difference between an index and a key?",
     "List two Ruby Enumerators and give their purpose.",
-    "Explain the purpose of HTML attributes"
+    "Explain the purpose of HTML attributes.",
+    "Create a Student class with one property and one method. Initialize a student.",
+    "Explain the difference between attr_reader, attr_writer and attr_accessor.",
+    "What is the difference between local and instance variables?",
+    "When would you use a class variable? Provide an example.",
+    "Create a Lion class that inherits from a Cat class."
   ],
   "Javascript": [
     "Describe the difference between what is truthy/falsey in Ruby vs JavaScript?",
