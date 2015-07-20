@@ -33,6 +33,24 @@ var data_slips = {
     "Explain the use of multiple fonts using font-family",
     "Explain the difference between padding and margin"
   ],
+  "Week 04": [
+    "Describe the difference between what is truthy/falsey in Ruby vs JavaScript?",
+    "Define what a function is in Javascript and how it compares to a Ruby method.",
+    "Differentiate between function declarations and expressions.",
+    "Explain the concept of a 'callback' function.",
+    "What are Ruby's 5 main data types?",
+    "What's the difference between a symbol and a string?",
+    "What's an enumerator?",
+    "Use the whiteboard to create a Ruby method that has two arguments.",
+    "What's the difference between explicit and implicit return?",
+    "How would you add a key / value pair to an existing hash?",
+    "What's the difference between a loop and an enumerator?",
+    "What's the difference between 'break' and 'return'?",
+    "Write a 'puts' statement on the board, and describe its input, output, and side effects.",
+    "What's the difference between an index and a key?",
+    "List two Ruby Enumerators and give their purpose.",
+    "Explain the purpose of HTML attributes"
+  ],
   "Javascript": [
     "Describe the difference between what is truthy/falsey in Ruby vs JavaScript?",
     "Using a 'for' loop, iterate over an array of numbers in JavaScript, printing each to the console.",
