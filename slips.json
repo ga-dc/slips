@@ -1,6 +1,11 @@
 
 var data_slips = {
   "Week 01": [
+    "Why would a developer prefer the command line over a GUI?",
+    "Write a command to list only files beginning with your first name and label the parts of the command",
+    "Where can we find help for shell commands?",
+    "List 4 bash commands for managing folders and files",
+    "Describe 2 unsafe commands",
     "Using a 'for' loop, iterate over an array of numbers in JavaScript, printing each to the console.",
     "Write a JavaScript Object literal with at least one property and one method (e.g. a person).",
     "Differentiate between function declarations and expressions.",
