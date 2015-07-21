@@ -55,7 +55,7 @@ var data_slips = {
     "What's the difference between an index and a key?",
     "List two Ruby Enumerators and give their purpose.",
     "Explain the purpose of HTML attributes.",
-    "Why would we want to take an object-oriented approach to programming?"
+    "Why would we want to take an object-oriented approach to programming?",
     "Create a Student class with one property and one method. Initialize a student.",
     "Explain the difference between attr_reader, attr_writer and attr_accessor.",
     "What is the difference between local and instance variables?",
