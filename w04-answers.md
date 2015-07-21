@@ -27,6 +27,7 @@ end
 #### "Differentiate between function declarations and expressions."
 Declaration
 * Defines a function without saving it to a variable.
+* Function declarations are "hoisted" (i.e., are available for immediate interpretation by Javascript, regardless of their position in code).
 
 ```javascript
 function multiply( number, multiplier ){
@@ -35,8 +36,7 @@ function multiply( number, multiplier ){
 ```
 
 Expression
-* A function that is saved to a variable.
-* Function expressions are "hoisted" (i.e., are immediately interpreted by by Javascript, regardless of their position in code).
+* An anonymous function that is saved to a variable.
 
 ```javascript
 var multiply = function( number, multiplier ){
@@ -45,7 +45,8 @@ var multiply = function( number, multiplier ){
 ```
 
 #### "Explain the concept of a 'callback' function."
-A callback function is a function that is executed when a certain action is completed.
+A callback function is a function that we maintain a reference to, in order to execute later. The most common example is to respond to a DOM event.
+
 * Key component of asynchronous programming.
 * Example #1: a function that increments a timer after each interval of a `setInterval` method.
 * Example #2: a function that stores the response of an AJAX call.
@@ -79,9 +80,9 @@ mans_best_friend = "dog"
 ```
 
 #### "What's an enumerator?"
-* A loop-like method that allows us to traverse/inspect/modify collections (e.g., arrays, hashes).
+* A loop-like method that traverses/inspects/modifies collections (e.g., arrays, hashes).
 * Preferred by Ruby over loops.
-* Of the `Enumerator` class.
+* Inherits from `Enumerator`.
 
 #### "Use the whiteboard to create a Ruby method that has two arguments."
 ```ruby
@@ -111,7 +112,7 @@ classroom[:squads] = [ "Bash", "C", "Fortran" ]
 ```
 
 #### "What's the difference between a loop and an enumerator?"
-A loop allows us to repeat an action. An enumerator allows us to iterate through elements of a collection.
+A loop allows us to repeat an action. An enumerator is a specific loop, which iterates through elements of a collection.
 * A loop can do the same thing as an enumerator, but enumerators are Ruby's preferred method of doing so.
 
 #### "What's the difference between 'break' and 'return'?"
