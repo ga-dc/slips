@@ -64,7 +64,15 @@ var data_slips = {
     "What components are displayed on an ERD?",
     "Draw an ERD for a Doctors, Patients, and Appointments.",
     "List common steps to follow when solving a problem.",
-    "Write the SQL statement to list the last names of everyone in the 'students' table."
+    "Write the SQL statement to list the last names of everyone in the 'students' table.",
+    "What's the difference between 'relative' and 'absolute' positioning?",
+    "What is a reliable source for 3rd party fonts?"
+    "Name 2 pseudo-classes that allow css to add content to a page."
+  ],
+  "CSS2": [
+    "What is the difference between 'relative' and 'absolute' positioning?"
+    "What is a reliable source for 3rd party fonts?"
+    "Name 2 pseudo-classes that allow css to add content to a page."
   ],
   "Databases": [
     "What components are displayed on an ERD?",

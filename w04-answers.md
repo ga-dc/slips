@@ -123,16 +123,92 @@ A loop allows us to repeat an action. An enumerator allows us to iterate through
 * Output: `nil`. The output of every `puts` statement is `nil`.
 * Side effect: printing "Hello world!" to the console.
 
-#### "What's the difference between an index and a key?",
-#### "List two Ruby Enumerators and give their purpose.",
-#### "Explain the purpose of HTML attributes.",
+#### "What's the difference between an index and a key?"
+An index is used to increase performance.  A key is used to uniquely identify a row.
+
+#### "List two Ruby Enumerators and give their purpose."
+`each`: Calls the given block once for each element in self, passing that element as a parameter.
+`each_with_index`: Calls block with two arguments, the item and its index, for each item in enum.
+`map/collect`: Returns a new array with the results of running block once for every element in enum.
+`select/find_all`: Returns a new array containing all elements of ary for which the given block returns a true value.
+`detect/find`: Passes each entry in enum to block. Returns the first for which block is not false.
+`reject`: Returns an array for all elements of enum for which the given block returns false.
+`all?`: Passes each element of the collection to the given block. The method returns true if the block never returns false or nil.
+`any?`: Passes each element of the collection to the given block. The method returns true if the block ever returns a value other than false or nil.
+
+#### "Explain the purpose of HTML attributes."
+Attributes modify the element, providing meta-information about an element.
+
 #### "Why would we want to take an object-oriented approach to programming?"
-#### "Create a Student class with one property and one method. Initialize a student.",
-#### "Explain the difference between attr_reader, attr_writer and attr_accessor.",
-#### "What is the difference between local and instance variables?",
-#### "When would you use a class variable? Provide an example.",
+To have our solution closely resemble the problem domain.  
+It allows us to break our problem in entities.
+Each entity encapsulates data and behavior together, while defining an interface with the outside world.
+It's easy to expand/share functionality via inheritence and polymorphism.
+
+#### "Create a Student class with one property and one method. Initialize a student."
+```
+class Student
+  attr_accessor :name
+
+  def initialize(name)
+    @name = name
+  end
+
+  def graduate(class)
+    class.graduate(self)
+  end
+end
+
+harry_potter = Student.new("Harry")
+```
+
+#### "Explain the difference between attr_reader, attr_writer and attr_accessor."
+`attr_reader`: creates getters for the passed attributes.  Must be set via instance variables.
+`att_writer`: creates setters for the passed attributes, which assign the associated instance variables.
+`attr_accessor`: creates both setters and getters for the passed attributes.
+
+#### "What is the difference between local and instance variables?"
+Local variable are accessible withing the scope they are created (usually a method).
+Instance variables are available for every instance method in an instance of the class.
+
+#### "When would you use a class variable? Provide an example."
+To maintain the same information across every instance (e.g. count of instances, configuration info that is used by all instances)
+
 #### "Create a Lion class that inherits from a Cat class.  Lion#speak returns a ROAR.",
-#### "What components are displayed on an ERD?",
-#### "Draw an ERD for a Doctors, Patients, and Appointments.",
-#### "List common steps to follow when solving a problem.",
+```
+class Lion < Cat
+  def speak
+    "Roar"
+  end
+end
+```
+
+#### "What components are displayed on an ERD?"
+Entities, relationships, and attributes
+
+#### "Draw an ERD for a Doctors, Patients, and Appointments."
+Doctors have_many Appointments.  Patients have_many Appointments.
+Appointments contains FK for Doctor and Patient
+
+#### "List common steps to follow when solving a problem."
+- clarify the problem
+- brainstorm
+- organize/select
+- prototype
+- review
+- double down or pivot
+
 #### "Write the SQL statement to list the last names of everyone in the 'students' table."
+`SELECT last_name FROM students`
+
+#### "What's the difference between 'relative' and 'absolute' positioning?"
+- static: not positioned
+- relative: relative to normal position
+- fixed: relative to viewport
+- absolute: relative to the nearest **positioned** ancestor
+
+#### "What is a reliable source for 3rd party fonts?"
+Google fonts
+
+#### "Name 2 pseudo-classes that allow css to add content to a page."
+::after, ::before
