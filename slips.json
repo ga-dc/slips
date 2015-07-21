@@ -70,8 +70,8 @@ var data_slips = {
     "Name 2 pseudo-classes that allow css to add content to a page."
   ],
   "CSS2": [
-    "What is the difference between 'relative' and 'absolute' positioning?"
-    "What is a reliable source for 3rd party fonts?"
+    "What is the difference between 'relative' and 'absolute' positioning?",
+    "What is a reliable source for 3rd party fonts?",
     "Name 2 pseudo-classes that allow css to add content to a page."
   ],
   "Databases": [
