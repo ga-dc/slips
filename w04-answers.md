@@ -122,17 +122,3 @@ A loop allows us to repeat an action. An enumerator allows us to iterate through
 * Input: the string "Hello world!"
 * Output: `nil`. The output of every `puts` statement is `nil`.
 * Side effect: printing "Hello world!" to the console.
-
-#### "What's the difference between an index and a key?",
-#### "List two Ruby Enumerators and give their purpose.",
-#### "Explain the purpose of HTML attributes.",
-#### "Why would we want to take an object-oriented approach to programming?"
-#### "Create a Student class with one property and one method. Initialize a student.",
-#### "Explain the difference between attr_reader, attr_writer and attr_accessor.",
-#### "What is the difference between local and instance variables?",
-#### "When would you use a class variable? Provide an example.",
-#### "Create a Lion class that inherits from a Cat class.  Lion#speak returns a ROAR.",
-#### "What components are displayed on an ERD?",
-#### "Draw an ERD for a Doctors, Patients, and Appointments.",
-#### "List common steps to follow when solving a problem.",
-#### "Write the SQL statement to list the last names of everyone in the 'students' table."
