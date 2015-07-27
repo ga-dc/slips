@@ -83,7 +83,7 @@ var data_slips = {
     "What is binding.pry and how do we use it?",
     "Create a schema table for a Student model that has a name and age property.",
     "Explain what an ORM is and why they are useful.",
-    "What does 'convention over configuration' mean? Provide an example."
+    "What does 'convention over configuration' mean? Provide an example.",
     "Explain how to represent one-to-many relationships in AR (including DB columns).",
     "What is the difference between an Active Record class and instance method? Provide an example of each.",
     "What is the difference between Active Record methods find, find_by and where? Provide an example of each.",
