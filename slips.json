@@ -79,7 +79,7 @@ var data_slips = {
     "Use the whiteboard to create a Ruby method that has two arguments.",
     "How many objects can a method return? Which methods don't return anything?",
     "Create a Student class with one property and one method. Initialize a student.",
-    "Write a Ruby class with an initialize method.",
+    "Use .each to iterate through a hash.",
     "What is binding.pry and how do we use it?",
     "Create a schema table for a Student model that has a name and age property.",
     "Explain what an ORM is and why they are useful.",
