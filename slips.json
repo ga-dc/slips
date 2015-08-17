@@ -98,12 +98,21 @@ var data_slips = {
   ],
   "Week 08": [
     "What is binding.pry and how do we use it?",
-    "Whiteboard a Rails link helper. Incorporate a path helper.",
+    "Give an example usage of the 'link_to' method in Rails.",
     "What does it mean to use nested resources and why would you implement them?",
     "What is the purpose of `params`? Also list three ways in which Rails puts data in it.",
     "Explain what active record validations are for, and give an example of one.",
     "Describe the MVC (or rMVC) paradigm as it relates to Rails.",
-    "Write a JavaScript Object literal with at least one property and one method (e.g. a person)."
+    "Write a JavaScript Object literal with at least one property and one method (e.g. a person).",
+    "Distinguish between a route and a path",
+    "Explain what ERB is and why we use it.",
+    "What is the purpose of `params`? Also list three ways in which Rails puts data in it.",
+    "Explain how to represent one-to-many relationships in AR (including DB columns).",
+    "Explain what an ORM is and why they are useful.",
+    "Define routes using Sinatra",
+    "What is the purpose of sinatra's layout.erb file?",
+    "Write an html <script> tag that links to a js file in public/js/app.js",
+    "Define routes with URL parameters and access those parameters"
   ],
   "CSS2": [
     "What is the difference between 'relative' and 'absolute' positioning?",
