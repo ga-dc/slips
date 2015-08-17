@@ -124,7 +124,7 @@ var data_slips = {
     "List two Ruby Enumerators and give their purpose.",
     "Identify the three places that CSS styles can go",
     "Define the purpose of the 'action' and 'method' attributes of a form.",
-    "Assuming a Activerecord class, name three methods that are added by `has_many :comments`"
+    "Assuming a ActiveRecord class, name three methods that are added by `has_many :comments`"
   ],
   "CSS2": [
     "What is the difference between 'relative' and 'absolute' positioning?",
