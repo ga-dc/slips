@@ -94,7 +94,8 @@ var data_slips = {
     "List the 5 HTTP request methods. How do they relate to the 4 crud actions?",
     "Whiteboard the HTML for a form that creates a new instance of a Student model.",
     "What is the purpose of sinatra's layout.erb file?",
-    "Write an html <script> tag that links to a js file in public/js/app.js"
+    "Write an html <script> tag that links to a js file in public/js/app.js",
+    "How would you add a key / value pair to an existing hash?"
   ],
   "Week 08": [
     "What is binding.pry and how do we use it?",
@@ -112,7 +113,17 @@ var data_slips = {
     "Define routes using Sinatra",
     "What is the purpose of sinatra's layout.erb file?",
     "Write an html <script> tag that links to a js file in public/js/app.js",
-    "Define routes with URL parameters and access those parameters"
+    "Define routes with URL parameters and access those parameters",
+    "Explain the concept of a 'callback' function.",
+    "Write a JavaScript Object literal with at least one property and one method (e.g. a person).",
+    "List the 5 HTTP request methods. How do they relate to the 4 crud actions?",
+    "Whiteboard a Rails form helper that creates or edits an instance of a Student model.",
+    "What is the difference between 'relative' and 'absolute' positioning?",
+    "Explain the difference between referencing and invoking a function.",
+    "Describe the difference between a fork and a branch.",
+    "List two Ruby Enumerators and give their purpose.",
+    "Identify the three places that CSS styles can go",
+    "Define the purpose of the 'action' and 'method' attributes of a form."
   ],
   "CSS2": [
     "What is the difference between 'relative' and 'absolute' positioning?",
