@@ -107,7 +107,6 @@ var data_slips = {
     "Write a JavaScript Object literal with at least one property and one method (e.g. a person).",
     "Distinguish between a route and a path",
     "Explain what ERB is and why we use it.",
-    "What is the purpose of `params`? Also list three ways in which Rails puts data in it.",
     "Explain how to represent one-to-many relationships in AR (including DB columns).",
     "Explain what an ORM is and why they are useful.",
     "Define routes using Sinatra",
@@ -124,7 +123,8 @@ var data_slips = {
     "List two Ruby Enumerators and give their purpose.",
     "Identify the three places that CSS styles can go",
     "Define the purpose of the 'action' and 'method' attributes of a form.",
-    "Assuming a ActiveRecord class, name three methods that are added by `has_many :comments`"
+    "Assuming a ActiveRecord class, name three methods that are added by `has_many :comments`",
+    "What is the difference between Active Record methods find, find_by and where? Provide an example of each.",
   ],
   "CSS2": [
     "What is the difference between 'relative' and 'absolute' positioning?",
