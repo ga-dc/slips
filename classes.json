@@ -1,13 +1,5 @@
 var data_students = {
   "Peanut Butter": [
-    "Kevin C",
-    "Matthew C",
-    "Peter C",
-    "Preston D",
-    "Nayana D",
-    "Karl D",
-    "Paul D",
-    "Mike D",
     "Philip E",
     "Matthew F",
     "Cameron F",
@@ -24,9 +16,7 @@ var data_students = {
     "Svitlana K",
     "Christine L",
     "John M",
-    "Anand M"
-  ],
-  "Jelly": [
+    "Anand M",
     "Laura N",
     "Cheikh N",
     "Nick O",
@@ -34,7 +24,9 @@ var data_students = {
     "Edward P",
     "Lon P",
     "Justin P",
-    "Malissa R",
+    "Malissa R"
+  ],
+  "Jelly": [
     "Lisa S",
     "Arash S",
     "Adrian S",
@@ -52,5 +44,13 @@ var data_students = {
     "Thomas B",
     "Robert B",
     "Silvia B",
+    "Kevin C",
+    "Matthew C",
+    "Peter C",
+    "Preston D",
+    "Nayana D",
+    "Karl D",
+    "Paul D",
+    "Mike D"
   ]
 }
