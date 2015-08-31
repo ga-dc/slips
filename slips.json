@@ -1,5 +1,35 @@
-
 var data_slips = {
+  "Week 10": [
+    "What does the HTML5 history api allow us to do?",
+    "What is one problem that Single Page Applications face that traditional web apps don't?",
+    "What is `npm`?",
+    "Write a get request using any path as you would in an express application.",
+    "How does `module.exports` help us with separation of concerns?",
+    "What are constructor functions and the new keyword? How are they related?",
+    "What is a prototype? Why do we care about them?",
+    "Describe how we use prototypes to set up inheritance in JS",
+    "List 1 Sequelize method and its ActiveRecord counterpart.",
+    "How do callbacks and asynchronicity factor into Sequelize?",
+    "Where should you declare associations in a Sequelize app?",
+    "There are 3 different ways to set up your database tables in a Sequelize app. What are 2?",
+    "What action do you expect this route to perform: `app.post('/authors', function() {...}`?",
+    "Explain the `req` and `res` variables in `app.get('/authors', function(req, res){...})`",
+    "Write a root route that redirects to '/authors'.",
+    "What is a API?",
+    "Give an example of each JSON data structure.",
+    "Write the url to request all authors, formatted as JSON.",
+    "Write a Rails controller which supports html and json responses.",
+    "Create a media query that supports most mobile phones.",
+    "How can box sizing affect the DOM Element?",
+    "Draw an ERD for a Members, Magazines, and Subscriptions.",
+    "Write the SQL statement to update the first_name of the 'author' whose ID is 12.",
+    "Using a 'for' loop, iterate over an array of numbers in JavaScript, printing each to the console.",
+    "Explain what active record validations are for, and give an example of one.",
+    "Give an example usage of the 'link_to' method in Rails.",
+    "List at least 3 methods added to a class when it inherits from ActiveRecord::Base.",
+    "What's the difference between an implicit return and a side effect?",
+    "'I'm the world's #0 programmer!' Explain the joke.",
+  ],
   "Week 01": [
     "Why would a developer prefer the command line over a GUI?",
     "Write a command to list only files beginning with your first name and label the parts of the command",
@@ -126,10 +156,46 @@ var data_slips = {
     "Assuming a ActiveRecord class, name three methods that are added by `has_many :comments`",
     "What is the difference between Active Record methods find, find_by and where? Provide an example of each.",
   ],
+  "TDD JS": [
+
+  ],
+  "Single Page Apps": [
+    "What does the HTML5 history api allow us to do?",
+    "What is one problem that Single Page Applications face that traditional web apps don't?",
+  ],
+  "Express": [
+    "What is `npm`?",
+    "Write a get request using any path as you would in an express application.",
+    "How does `module.exports` help us with separation of concerns?",
+    "What action do you expect this route to perform: `app.post('/authors', function() {...}`?",
+    "Explain the `req` and `res` variables in `app.get('/authors', function(req, res){...})`",
+    "Write a root route that redirects to '/authors'.",
+  ],
+  "Sequelize": [
+    "List 1 Sequelize method and its ActiveRecord counterpart.",
+    "How do callbacks and asynchronicity factor into Sequelize?",
+    "Where should you declare associations in a Sequelize app? ( Hint: Before or after you require your models? )",
+    "There are 3 different ways to set up your database tables in a Sequelize app. What are 2?",
+  ],
+  "OOJS": [
+    "What are constructor functions and the new keyword? How are they related?",
+    "What is a prototype? Why do we care about them?",
+    "Describe how we use prototypes to set up inheritance in JS",
+  ],
+  "APIs": [
+    "What is a API?",
+    "Give an example of each JSON data structure.",
+    "Write the url to request all authors, formatted as JSON.",
+    "Write a Rails controller which supports html and json responses.",
+  ],
+  "RWD": [
+    "Create a media query that supports most mobile phones.",
+  ],
   "CSS2": [
     "What is the difference between 'relative' and 'absolute' positioning?",
     "What is a reliable source for 3rd party fonts?",
-    "Name 2 pseudo-classes that allow css to add content to a page."
+    "Name 2 pseudo-classes that allow css to add content to a page.",
+    "How can box sizing affect the DOM Element?"
   ],
   "Databases": [
     "What components are displayed on an ERD?",
