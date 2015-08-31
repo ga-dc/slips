@@ -5,7 +5,7 @@ var data_slips = {
     "What is `npm`?",
     "Write a get request using any path as you would in an express application.",
     "How does `module.exports` help us with separation of concerns?",
-    "What are constructor functions and the new keyword? How are they related?",
+    "What are constructor functions? How do we use them?",
     "What is a prototype? Why do we care about them?",
     "Describe how we use prototypes to set up inheritance in JS",
     "List 1 Sequelize method and its ActiveRecord counterpart.",
@@ -17,7 +17,7 @@ var data_slips = {
     "Write a root route that redirects to '/authors'.",
     "What is a API?",
     "Give an example of each JSON data structure.",
-    "Write the url to request all authors, formatted as JSON.",
+    "Write the url to request all authors from a Rails app, formatted as JSON.",
     "Write a Rails controller which supports html and json responses.",
     "Create a media query that supports most mobile phones.",
     "How can box sizing affect the DOM Element?",
@@ -185,7 +185,7 @@ var data_slips = {
   "APIs": [
     "What is a API?",
     "Give an example of each JSON data structure.",
-    "Write the url to request all authors, formatted as JSON.",
+    "Write the url to request all authors from a Rails app, formatted as JSON.",
     "Write a Rails controller which supports html and json responses.",
   ],
   "RWD": [
