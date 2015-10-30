@@ -1,12 +1,11 @@
 var data_students = {
   "Earth L1ons": [
-    "Fatai A.",
-    "Daniel A.",
-    "Mati A.",
-    "Kelly A.",
-    "Aurelio A.",
-    "Chrystal B",
-    "Becky B.",
+    "Wonsik J.",
+    "Alexis J.",
+    "Andrew J.",
+    "Elise K.",
+    "Negar K.",
+    "Teddy K.",
 
     "Jordan B.",
     "Tory B.",
@@ -17,15 +16,22 @@ var data_students = {
     "Josh C.",
     "Tyler C.",
 
-    "Roshana D.",
-    "Rebecca E.",
-    "Alice F.",
-    "Maurice G.",
-    "Joseph G.",
-    "Moe G.",
-    "Dimitri G."
+    "James M.",
+    "Matt M.",
+    "Ly N.",
+    "Jared N.",
+    "John P.",
+    "Jen P."
   ],
   "Fire Be4rs": [
+    "Fatai A.",
+    "Daniel A.",
+    "Mati A.",
+    "Kelly A.",
+    "Aurelio A.",
+    "Chrystal B",
+    "Becky B.",
+
     "Davis G.",
     "Tim G.",
     "Mia G.",
@@ -35,12 +41,22 @@ var data_students = {
     "Sarah H.",
     "Thom H.",
 
-    "Wonsik J.",
-    "Alexis J.",
-    "Andrew J.",
-    "Elise K.",
-    "Negar K.",
-    "Teddy K.",
+    "Jorge P.",
+    "Matt P.",
+    "Rachel P.",
+    "Alea Q.",
+    "Alex S.",
+    "Markham S.",
+    "Andre S."
+  ],
+  "Wind Tiger5": [
+    "Roshana D.",
+    "Rebecca E.",
+    "Alice F.",
+    "Maurice G.",
+    "Joseph G.",
+    "Moe G.",
+    "Dimitri G.",
 
     "Chris K.",
     "Mariia K.",
@@ -49,24 +65,7 @@ var data_students = {
     "Benjamin L.",
     "Brendan M.",
     "Chauncey M.",
-    "Samir M."
-  ],
-  "Wind Tiger5": [
-    "James M.",
-    "Byron M.",
-    "Matt M.",
-    "Ly N.",
-    "Jared N.",
-    "John P.",
-    "Jen P.",
-
-    "Jorge P.",
-    "Matt P.",
-    "Rachel P.",
-    "Alea Q.",
-    "Alex S.",
-    "Markham S.",
-    "Andre S.",
+    "Samir M.",
 
     "Thomas S.",
     "Eric S.",
