@@ -96,7 +96,7 @@ var data_slips = {
     "Write an html <script> tag that links to a js file in public/js/app.js",
     "How would you add a key / value pair to an existing hash?"
   ],
-  "Week 08": [
+  "Week 07": [
     "What is binding.pry and how do we use it?",
     "Give an example usage of the 'link_to' method in Rails.",
     "What does it mean to use nested resources and why would you implement them?",
