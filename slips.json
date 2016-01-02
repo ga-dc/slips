@@ -188,6 +188,39 @@ var data_slips = {
     "What's the difference between an implicit return and a side effect?",
     "'I'm the world's #0 programmer!' Explain the joke.",
   ],
+  "Week 11": [
+    "What are constructor functions? How do we use them?",
+    "What is a prototype? Why do we care about them?",
+    "What action do you expect this route to perform: `app.post('/authors', function() {...}`?",
+    "Write the url to request all authors from a Rails app, formatted as JSON.",
+    "Create a media query that supports most mobile phones.",
+    "How can box sizing affect a DOM Element?",
+    "Explain the difference between referencing and invoking a function.",
+    "Explain the concept of a 'callback' function.",
+    "Explain what an ORM is and why they are useful.",
+    "List at least 3 methods added to a class when it inherits from ActiveRecord::Base.",
+    "Explain what REST is and why we use it",
+    "Define the purpose of the 'action' and 'method' attributes of a form.",
+    "List the HTTP request verbs",
+    "Instantiate an Angular module on the whiteboard. What arguments does it receive?",
+    "What is an IIFE? Why do we use them in Angular?",
+    "What is an Angular directive? Provide three examples of one.",
+    "How do we indicate something is an Angular expression in an HTML file?",
+    "Why do we use the term 'ViewModel' in Angular?",
+    "What type of Angular component is `ngResource`? What does it do?",
+    "What is an Angular 'state'? What information do we need to define one?",
+    "Why are custom directives useful in Angular?"
+  ],
+  "Angular": [
+    "Instantiate an Angular module on the whiteboard. What arguments does it receive?",
+    "What is an IIFE? Why do we use them in Angular?",
+    "What is an Angular directive? Provide three examples of one.",
+    "How do we indicate something is an Angular expression in an HTML file?",
+    "Why do we use the term 'ViewModel' in Angular?",
+    "What type of Angular component is `ngResource`? What does it do?",
+    "What is an Angular 'state'? What information do we need to define one?",
+    "Why are custom directives useful in Angular?"
+  ],
   "TDD JS": [
 
   ],
@@ -286,7 +319,6 @@ var data_slips = {
     "How many objects can a method return? Which methods don't return anything?",
     "What's the difference between 'break' and 'return'?",
     "Write a 'puts' statement on the board, and describe its input, output, and side effects.",
-    "What's the difference between 'git commit' and 'git push'?",
     "'I'm the world's #0 programmer!' Explain the joke.",
     "What's the difference between an index and a key?",
     "List two Ruby Enumerators and give their purpose."
