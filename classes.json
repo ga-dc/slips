@@ -8,28 +8,6 @@ var data_students = {
     "Chrystal B",
     "Becky B.",
 
-    "Chris K.",
-    "Brendan L.",
-    "Bryce L.",
-    "Brendan M.",
-    "Chauncey M.",
-    "Samir M.",
-
-    "James M.",
-    "Matt M.",
-    "Ly N.",
-    "Jared N.",
-    "John P.",
-    "Jen P."
-  ],
-  "Fire Be4rs": [
-    "Roshana D.",
-    "Rebecca E.",
-    "Alice F.",
-    "Joseph G.",
-    "Moe G.",
-    "Dimitri G.",
-
     "Jordan B.",
     "Tory B.",
     "Shawn C.",
@@ -39,21 +17,21 @@ var data_students = {
     "Josh C.",
     "Tyler C.",
 
-    "Jorge P.",
-    "Matt P.",
-    "Rachel P.",
-    "Alea Q.",
-    "Alex S.",
-    "Markham S.",
-    "Andre S."
+    "Roshana D.",
+    "Rebecca E.",
+    "Alice F.",
+    "Joseph G.",
+    "Moe G.",
+    "Dimitri G.",
+
   ],
-  "Wind Tiger5": [
-    "Wonsik J.",
-    "Alexis J.",
-    "Andrew J.",
-    "Elise K.",
-    "Negar K.",
-    "Teddy K.",
+  "Fire Be4rs": [
+    "Chris K.",
+    "Brendan L.",
+    "Bryce L.",
+    "Brendan M.",
+    "Chauncey M.",
+    "Samir M.",
 
     "Davis G.",
     "Tim G.",
@@ -64,11 +42,36 @@ var data_students = {
     "Sarah H.",
     "Thom H.",
 
+    "Wonsik J.",
+    "Alexis J.",
+    "Andrew J.",
+    "Elise K.",
+    "Negar K.",
+    "Teddy K.",
+
+  ],
+  "Wind Tiger5": [
     "Thomas S.",
     "Eric S.",
     "Qadriyyah T.",
     "Dennis T.",
     "Britton W.",
     "Peter Z."
+
+    "Jorge P.",
+    "Matt P.",
+    "Rachel P.",
+    "Alea Q.",
+    "Alex S.",
+    "Markham S.",
+    "Andre S."
+
+    "James M.",
+    "Matt M.",
+    "Ly N.",
+    "Jared N.",
+    "John P.",
+    "Jen P."
+
   ]
 }
