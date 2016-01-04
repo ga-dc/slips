@@ -56,7 +56,7 @@ var data_students = {
     "Qadriyyah T.",
     "Dennis T.",
     "Britton W.",
-    "Peter Z."
+    "Peter Z.",
 
     "Jorge P.",
     "Matt P.",
@@ -64,14 +64,14 @@ var data_students = {
     "Alea Q.",
     "Alex S.",
     "Markham S.",
-    "Andre S."
+    "Andre S.",
 
     "James M.",
     "Matt M.",
     "Ly N.",
     "Jared N.",
     "John P.",
-    "Jen P."
+    "Jen P.",
 
   ]
 }
