@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <a class="js-get-token" href="http://localhost:3000/api/cohorts/38/get_api_token">Login</a>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      var getToken = document.querySelector(".js-get-token")
+      getToken.addEventListener("click", function(evt){
+        evt.preventDefault()
+        window.open(this.href)
+      })
+      window.addEventListener("message", function(evt){
+        console.log(evt.data);
+        localStorage.setItem("api_token", evt.data)
+      })
+      var token = localStorage.getItem("api_token")
+      if (token){
+        $.getJSON("http://localhost:3000/api/cohorts/38/memberships?api_token=" + token, function(data){
+          console.log(data);
+          //TODO: Use Data to populate slips
+        })
+      }
+    </script>
+  </body>
+</html>
