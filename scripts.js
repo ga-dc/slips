@@ -1,4 +1,5 @@
 function slips(data_students){
+
   var data = {
     students: data_students,
     slips: data_slips,
@@ -35,13 +36,13 @@ function slips(data_students){
     gone: {
       el: document.getElementById("gone"),
       update: function(){
-        view.gone.el.innerText = data.students.slice(0, data.current.index).join("\n");
+        this.el.innerText = data.students.slice(0, data.current.index).join("\n");
       }
     },
     left: {
       el: document.getElementById("left"),
       update: function(){
-        view.left.el.innerText = data.students.slice(data.current.index + 1).join("\n");
+        this.el.innerText = data.students.slice(data.current.index + 1).join("\n");
       }
     },
     place: function(){
@@ -95,6 +96,8 @@ window.onload = function(){
   var token = localStorage.getItem("api_token");
   var url = "http://localhost:3000/api/cohorts/80/memberships?api_token=" + token + "&callback=?";
   $.getJSON(url, function(users){
-    slips(users);
+    if(!users.error){
+      slips(users);
+    }
   })
 };
