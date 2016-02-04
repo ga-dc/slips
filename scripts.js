@@ -1,63 +1,19 @@
-function shuffle(array){
-  var currentIndex = array.length;
-  var randomIndex;
-  var temporaryValue;
-  while(currentIndex > 0){
-    randomIndex  = Math.floor(Math.random() * currentIndex);
-    currentIndex = currentIndex - 1;
-
-    temporaryValue       = array[currentIndex];
-    array[currentIndex]  = array[randomIndex];
-    array[randomIndex]   = temporaryValue;
-  }
-  return array;
-}
-
-function buildList(name, el, data){
-  isChecked = false;
-  for(var itemName in data){
-    var option = document.createElement("LI");
-
-    var input = document.createElement("INPUT");
-    input.value = itemName;
-    input.type = "radio";
-    input.id = itemName;
-    input.name = name;
-    if(!isChecked){
-      input.checked = true;
-      isChecked = true;
-    }
-
-    var label = document.createElement("LABEL");
-    label.htmlFor = itemName; 
-    label.innerText = itemName;
-
-    option.appendChild(input);
-    option.appendChild(label);
-    el.appendChild(option);
-  }
-}
-
-function Slips(){
-
-  var c = this;
-
-  this.data = {
+function slips(data_students){
+  var data = {
     students: data_students,
     slips: data_slips,
     current: {
       index: 0,
       student: function(){
-        return c.data.students[c.data.current.index];
+        return data.students[this.index];
       },
       slip: function(){
-        var index = c.data.current.index - (c.data.slips.length * Math.floor(c.data.current.index / c.data.slips.length));
-        return c.data.slips[index];
+        var index = this.index - (data.slips.length * Math.floor(data.current.index / data.slips.length));
+        return data.slips[index];
       }
     }
   }
-
-  this.view = {
+  var view = {
     current: {
       student: document.getElementById("currentName"),
       slip: document.getElementById("currentSlip")
@@ -79,71 +35,66 @@ function Slips(){
     gone: {
       el: document.getElementById("gone"),
       update: function(){
-        c.view.gone.el.innerText = c.data.students.slice(0, c.data.current.index).join("\n");
+        view.gone.el.innerText = data.students.slice(0, data.current.index).join("\n");
       }
     },
     left: {
       el: document.getElementById("left"),
       update: function(){
-        c.view.left.el.innerText = c.data.students.slice(c.data.current.index + 1).join("\n");
+        view.left.el.innerText = data.students.slice(data.current.index + 1).join("\n");
       }
     },
     place: function(){
-      currentName.innerText = c.data.current.student(); 
-      currentSlip.innerText = c.data.current.slip();
-      c.view.gone.update();
-      c.view.left.update();
-      c.data.current.index++;
+      currentName.innerText = data.current.student();
+      currentSlip.innerText = data.current.slip();
+      view.gone.update();
+      view.left.update();
+      data.current.index++;
     },
     load: function(){
       var cohort = document.querySelector("#students_select input:checked");
       var topic = document.querySelector("#slips_select input:checked");
-      c.data.students = data_students[cohort.value].sort();
-      c.data.slips = data_slips[topic.value].sort();
-      if(c.view.input.random.students.checked){
-        c.data.students = shuffle(c.data.students);
-      }
-      if(c.view.input.random.slips.checked){
-        c.data.slips = shuffle(c.data.slips);
-      }
+        data.students = data_students.sort();
+        data.slips = data_slips[topic.value].sort();
+        if(view.input.random.students.checked){
+          data.students = shuffle(data.students);
+        }
+        if(view.input.random.slips.checked){
+          data.slips = shuffle(data.slips);
+        }
     }
   }
-
-  this.events = {
+  var events = {
     next: function(){
-      clearTimeout(c.events.timer);
-      c.view.current.slip.className = "";
-      if(c.data.current.index < c.data.students.length){
-        c.view.place();
-      }
-      if(c.view.input.time.value){
-        setTimeout(c.events.timer, c.view.input.time.value * 1000);
+      view.current.slip.className = "";
+      if(data.current.index < data.students.length){
+        view.place();
       }
     },
     prev: function(){
-      if(c.data.current.index > 1){
-        c.data.current.index = c.data.current.index - 2;
-        c.view.place();
+      if(data.current.index > 1){
+        data.current.index = data.current.index - 2;
+        view.place();
       }
     },
     reset: function(){
-      c.data.current.index = 0;
-      c.view.load();
-      c.events.next();
-    },
-    timer: function(){
-      c.view.current.slip.className = "overtime";
+      data.current.index = 0;
+      view.load();
+      events.next();
     }
   }
-
-  this.view.input.next.addEventListener("click", this.events.next);
-  this.view.input.prev.addEventListener("click", this.events.prev);
-  this.view.input.reset.addEventListener("click", this.events.reset);
-
-  buildList("select_students", this.view.input.select.students, this.data.students);
-  buildList("select_slips", this.view.input.select.slips, this.data.slips);
-  this.view.load();
-  this.view.place();
+  view.input.next.addEventListener("click", events.next);
+  view.input.prev.addEventListener("click", events.prev);
+  view.input.reset.addEventListener("click", events.reset);
+  buildList("select_students", view.input.select.students, data.students);
+  buildList("select_slips", view.input.select.slips, data.slips);
+  view.load();
+  view.place();
 }
-
-window.onload = Slips;
+window.onload = function(){
+  var token = localStorage.getItem("api_token");
+  var url = "http://localhost:3000/api/cohorts/80/memberships?api_token=" + token + "&callback=?";
+  $.getJSON(url, function(users){
+    slips(users);
+  })
+};

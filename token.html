@@ -19,8 +19,9 @@
       })
       var token = localStorage.getItem("api_token")
       if (token){
-        $.getJSON("http://localhost:3000/api/cohorts/38/memberships?api_token=" + token + "&callback=?", function(data){
+        $.getJSON("http://localhost:3000/api/cohorts/80/memberships?api_token=" + token + "&callback=?", function(data){
           console.log(data);
+          
         })
       }
     </script>
