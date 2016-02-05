@@ -1,3 +1,5 @@
+
+
 function slips(data_students){
 
   var data = {
@@ -93,11 +95,22 @@ function slips(data_students){
   view.place();
 }
 window.onload = function(){
-  var token = localStorage.getItem("api_token");
-  var url = "http://localhost:3000/api/cohorts/80/memberships?api_token=" + token + "&callback=?";
-  $.getJSON(url, function(users){
-    if(!users.error){
-      slips(users);
+  var getToken = document.querySelector(".js-get-token");
+  console.log(getToken)
+  getToken.addEventListener("click", function(evt){
+    evt.preventDefault()
+    window.open(this.href)
+  })
+  window.addEventListener("message", function(evt){
+    var token = evt.data;
+    if(token){
+    var url = "http://localhost:3000/api/cohorts/80/memberships?api_token=" + token + "&callback=?";
+    $.getJSON(url, function(users){
+      if(!users.error){
+        slips(users);
+      }
+    })
     }
   })
+
 };
