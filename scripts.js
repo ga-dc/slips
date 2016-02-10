@@ -104,7 +104,7 @@ window.onload = function(){
   window.addEventListener("message", function(evt){
     var token = evt.data;
     if(token){
-    var url = "http://localhost:3000/api/cohorts/80/memberships?api_token=" + token + "&callback=?";
+    var url = "http://garnet.wdidc.org/api/cohorts/4/memberships?api_token=" + token + "&callback=?";
     $.getJSON(url, function(users){
       if(!users.error){
         slips(users);
