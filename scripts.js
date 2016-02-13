@@ -57,6 +57,8 @@ function slips(data_students){
     load: function(){
       var cohort = document.querySelector("#students_select input:checked");
       var topic = document.querySelector("#slips_select input:checked");
+      var url = "http://garnet.wdidc.org/api/cohorts/4/memberships?api_token=" + token + "&tag="+cohort.value+"&callback=?";
+      getStudents(url, function(data_students){
         data.students = data_students.sort();
         data.slips = data_slips[topic.value].sort();
         if(view.input.random.students.checked){
@@ -65,6 +67,7 @@ function slips(data_students){
         if(view.input.random.slips.checked){
           data.slips = shuffle(data.slips);
         }
+      })
     }
   }
   var events = {
@@ -89,7 +92,6 @@ function slips(data_students){
   view.input.next.addEventListener("click", events.next);
   view.input.prev.addEventListener("click", events.prev);
   view.input.reset.addEventListener("click", events.reset);
-  buildList("select_students", view.input.select.students, data.students);
   buildList("select_slips", view.input.select.slips, data.slips);
   view.load();
   view.place();
@@ -102,15 +104,18 @@ window.onload = function(){
     window.open(this.href)
   })
   window.addEventListener("message", function(evt){
-    var token = evt.data;
+    token = evt.data;
     if(token){
-    var url = "http://garnet.wdidc.org/api/cohorts/4/memberships?api_token=" + token + "&callback=?";
-    $.getJSON(url, function(users){
-      if(!users.error){
-        slips(users);
-      }
-    })
+      var url = "http://garnet.wdidc.org/api/cohorts/4/memberships?api_token=" + token + "&callback=?";
+      getStudents(url, slips)
     }
   })
-
 };
+
+function getStudents(url, callback){
+  $.getJSON(url, function(users){
+    if(!users.error){
+      callback(users);
+    }
+  })
+}
