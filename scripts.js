@@ -1,7 +1,4 @@
-
-
 function slips(data_students){
-
   var data = {
     students: data_students,
     slips: data_slips,
@@ -115,7 +112,11 @@ window.onload = function(){
 function getStudents(url, callback){
   $.getJSON(url, function(users){
     if(!users.error){
-      callback(users);
+      callback(users.filter(function(u){
+        return !u.is_admin && u.status == "active"
+      }).map(function(u){
+        return u.name
+      }));
     }
   })
 }
