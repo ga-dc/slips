@@ -3,13 +3,13 @@
   <head>
     <title>Slipz</title>
     <meta charset="utf-8" />
-    <script src="classes.json"></script>
+    <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
     <script src="slips.json"></script>
+    <script src="helpers.js"></script>
     <script src="scripts.js"></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-
     <header>
       <button id="prev" type="button"><span id="gone"></span></button>
       <button id="next" type="button"><span id="left"></span></button>
@@ -18,22 +18,31 @@
     <main id="display">
       <h1><span id="currentName"></span>:</h1>
       <p id="amntLeft"></p>
-      <p id="currentSlip"></p>
+      <p id="currentSlip">
+        <a class="js-get-token" href="http://garnet.wdidc.org/api/send_api_token">Login</a>
+      </p>
     </main>
 
     <footer>
       <div><a href="https://github.com/ga-dc/slips" target="_blank"><button class="run" type="button">Repo</button></a></div>
       <div>
-        <ul id="students_select" class="select"></ul>
+        <ul id="students_select" class="select">
+          <li>
+            <input type="radio" value="adrian|joe|matt" id="cr4" name="select_students" checked>
+            <label for="cr4">Classroom 4</label>
+          </li>
+          <li>
+            <input type="radio" value="becky|jesse|nick|robin" id="cr6" name="select_students">
+            <label for="cr6">Classroom 6</label>
+          </li>
+        </ul>
       </div>
       <div>
         <ul id="slips_select" class="select"></ul>
       </div>
       <div><input type="checkbox" id="rand_slips" /><label for="rand_slips">Random slips</label></div>
       <div><input type="checkbox" id="rand_students" /><label for="rand_students">Randomize student</label></div>
-      <div><input type="text" id="time" placeholder="Seconds" /></div>
       <div><button id="reset" class="run" type="button">Reset</button></div>
     </footer>
-
   </body>
 </html>
