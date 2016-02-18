@@ -4,7 +4,8 @@ var slips = (function(){
   return {
     login: login,
     getToken: getToken,
-    getStudents: getStudents
+    getStudents: getStudents,
+    matchQuestionsWithStudents: matchQuestionsWithStudents
   }
 
   function login(url, callback){
@@ -22,11 +23,23 @@ var slips = (function(){
     return localStorage.getItem("slips.api_token") || login();
   }
 
-  function getStudents(url, callback){
-    $.getJSON(url, function(response){
+  function getStudents(url, callback, options){
+    for(var opt in options){
+      url += "&" + opt + "=" + options[opt]
+    }
+    $.getJSON(url + "&callback=?", function(response){
       callback(response.filter(function(res){
         return !res.is_admin && res.status === "active"
       }))
+    })
+  }
+
+  function matchQuestionsWithStudents(students, week){
+    return students.map(function(student, i){
+      return {
+        student: student,
+        slip: data_slips[week][i]
+      }
     })
   }
 

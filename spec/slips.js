@@ -17,7 +17,7 @@ test("slips.login", function( assert ) {
 });
 
 test("slips.getStudents", function(assert){
-  var url = apiUrl + "?api_token=" + slips.getToken() + "&callback=?";
+  var url = apiUrl + "?api_token=" + slips.getToken();
   var done = assert.async();
   slips.getStudents(url, function(students){
     assert.equal(students.length > 0, true);
@@ -30,5 +30,21 @@ test("slips.getStudents", function(assert){
     })
     assert.equal(inactives.length === 0, true)
     done();
+  })
+})
+
+test("slips.matchQuestionsWithStudents", function(assert){
+  var done = assert.async();
+  var url = apiUrl + "?api_token=" + slips.getToken();
+  slips.getStudents(url, function(students){
+    var pairings = slips.matchQuestionsWithStudents(students, "Week 01")
+    assert.equal(pairings.constructor.name, "Array")
+    assert.ok(Object.keys(pairings[0]).includes("slip"))
+    assert.ok(Object.keys(pairings[0]).includes("student"))
+    // Make sure every student has a slip
+    assert.ok(pairings[pairings.length-1].slip)
+    done()
+  }, {
+    tag: "jesse|joe|nick"
   })
 })
