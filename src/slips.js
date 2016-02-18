@@ -13,7 +13,7 @@ var slips = (function(){
       if(/garnet/.test(event.origin)){
         token = event.data;
         localStorage.setItem("slips.api_token",token)
-        callback(event.data);
+        if (typeof callback === "function") callback(event.data);
       }
     })
     window.open(url)
@@ -37,10 +37,9 @@ var slips = (function(){
   function matchQuestionsWithStudents(students, week){
     return students.map(function(student, i){
       return {
-        student: student,
+        student: student.name,
         slip: data_slips[week][i]
       }
     })
   }
-
 })()
