@@ -59,21 +59,22 @@
       })
       function reset(students){
         var week = $("[name='select_slips']:checked").val()
-        var pairs = slips.matchQuestionsWithStudents(students, week)
+        pairs = slips.matchQuestionsWithStudents(students, week)
         $next.empty();
         $prev.empty();
+	console.log(pairs)
         pairs.forEach(function(pair,i){
           $next.append('<div data-index="'+i+'">'+ pair.student + '</div>')
         })
         $next.children().eq(0).remove()
-        $next.on("click", function(){
-          next(pairs)
-        });
-        $prev.on("click", function(){
-          prev(pairs)
-        });
         next(pairs); // sets the first one
       }
+      $next.on("click", function(){
+	next(pairs)
+      });
+      $prev.on("click", function(){
+	prev(pairs)
+      });
       function prev(pairs){
         if(!$prev.children().length) return
         var prev = $prev.children().eq($prev.children().length - 1)
