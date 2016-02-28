@@ -47,7 +47,7 @@ var data_slips = {
     "List common steps to follow when solving a problem.",
     "What's the difference between 'relative' and 'absolute' positioning?",
     "What is a reliable source for 3rd party fonts?",
-    "Name 2 pseudo-classes that allow css to add content to a page."
+    "Name 2 pseudo-classes that allow css to add content to a page.",
     "Explain the concept of a 'callback' function.",
     "Write a JavaScript constructor function with at least one property and one method (e.g. a person). Create an instance.",
     "What are constructor functions? How do we use them?",
