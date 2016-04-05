@@ -1,98 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <title>Slipz</title>
-    <meta charset="utf-8" />
-    <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
-    <script src="slips.json"></script>
-    <script src="helpers.js"></script>
-    <script src="./src/slips.js"></script>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <button id="prev" type="button"></button>
-      <button id="next" type="button"></button>
-    </header>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.min.js"></script>
+<script src="./slips.js"></script>
+<script src="./app.js"></script>
+</head>
+<body ng-app="slips" ng-controller="slipsController as vm" ng-keyup="vm.next($event)">
+<div ng-repeat="category in vm.categories">
+  <input type='checkbox' name='{{category}}' id='{{category}}' ng-model="vm.selected[category]" ng-change="vm.update()">
+  <label for='{{category}}'>
+    {{category}}
+  </label>
+</div>
+<h1>{{vm.currentSlip}}</h1>
 
-    <main id="display">
-      <h1><span id="currentName"></span>:</h1>
-      <p id="amntLeft"></p>
-      <p id="currentSlip">
-        <a class="js-slips-login" href="http://garnet.wdidc.org/api/send_api_token">Login</a>
-      </p>
-    </main>
+<div ng-show="vm.currentSlipIndex != undefined">
+{{vm.currentSlipIndex + 1}}/{{vm.slips.length}}
+</div>
 
-    <footer>
-      <div><a href="https://github.com/ga-dc/slips" target="_blank"><button class="run" type="button">Repo</button></a></div>
-      <div>
-        <ul id="students_select" class="select">
-          <li>
-            <input type="radio" value="jesse|robin|matt" id="cr4" name="select_students" checked>
-            <label for="cr4">Classroom 4</label>
-          </li>
-          <li>
-            <input type="radio" value="adrian|nick|becky|joe" id="cr6" name="select_students">
-            <label for="cr6">Classroom 6</label>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <ul id="slips_select" class="select"></ul>
-      </div>
-      <div><button id="reset" class="run" type="button">Reset</button></div>
-    </footer>
-    <script type="text/javascript">
-      buildList("select_slips", $("#slips_select")[0], data_slips)
-      var $next = $("#next")
-      var $prev = $("#prev")
-      var url = "https://garnet.wdidc.org/api/cohorts/4/memberships?api_token=" + slips.getToken()
-      $("#reset").on("click", function(){
-        var tag = $("#students_select :checked").val()
-        slips.getStudents(url, reset, {tag: tag})
-      })
-      $(".js-slips-login").on("click", function(evt){
-        evt.preventDefault();
-        slips.login(evt.target.href);
-        var tag = $("#students_select :checked").val()
-        slips.getStudents(url, reset, {tag: tag})
-      })
-      function reset(students){
-        var week = $("[name='select_slips']:checked").val()
-        pairs = slips.matchQuestionsWithStudents(students, week)
-        $next.empty();
-        $prev.empty();
-	console.log(pairs)
-        pairs.forEach(function(pair,i){
-          $next.append('<div data-index="'+i+'">'+ pair.student + '</div>')
-        })
-        $next.children().eq(0).remove()
-        next(pairs); // sets the first one
-      }
-      $next.on("click", function(){
-	next(pairs)
-      });
-      $prev.on("click", function(){
-	prev(pairs)
-      });
-      function prev(pairs){
-        if(!$prev.children().length) return
-        var prev = $prev.children().eq($prev.children().length - 1)
-        var i = prev.attr("data-index")
-        prev.remove()
-        $("#currentName").html(pairs[i].student)
-        $("#currentSlip").html(pairs[i].slip)
-        $("#next").prepend("<div data-index='"+i+"'>"+pairs[i].student+"</div>")
-      }
-      function next(pairs){
-        if(!$next.children().length) return
-        var next = $next.children().eq(0)
-        var i = next.attr("data-index")
-        next.remove()
-        $("#currentName").html(pairs[i].student)
-        $("#currentSlip").html(pairs[i].slip)
-        $("#prev").append("<div data-index='"+i+"'>"+pairs[i].student+"</div>")
-      }
-    </script>
-  </body>
+</body>
 </html>

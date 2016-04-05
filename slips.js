@@ -1,4 +1,4 @@
-var data_slips = {
+var slips = {
   "Week 01": [
     "Why would a developer prefer the command line over a GUI?",
     "Write a command to list only files beginning with your first name and label the parts of the command",
