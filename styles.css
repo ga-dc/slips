@@ -1,7 +1,20 @@
+html{
+  font-family:'Helvetica Neue', Helvetica, sans-serif;
+}
+
 label{
   border: 1px solid #ccc;
   padding: .25em .5em;
   display:inline-block;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+h1{
+  text-align: center;
+  margin:2em;
+  font-size:3em;
+  letter-spacing: -.025em;
 }
 
 input[type="checkbox"]{
@@ -9,10 +22,16 @@ input[type="checkbox"]{
 }
 
 :checked + label{
-  background:#ddd;
+  background:#eee;
 }
 
 .inline-block{
   display:inline-block;
   margin: .25em;
+}
+
+.bottom-right{
+  position:absolute;
+  bottom:1em;
+  right:1em;
 }

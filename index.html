@@ -15,7 +15,7 @@
 </div>
 <h1>{{vm.currentSlip}}</h1>
 
-  <div ng-show="vm.currentSlipIndex != undefined">
+  <div ng-show="vm.currentSlipIndex != undefined && vm.slips.length !== 0" class='bottom-right'>
   {{vm.currentSlipIndex + 1}}/{{vm.slips.length}}
   </div>
 </body>
