@@ -1,5 +1,6 @@
-html{
+html, body{
   font-family:'Helvetica Neue', Helvetica, sans-serif;
+  height:100%;
 }
 
 label{
@@ -12,9 +13,12 @@ label{
 
 h1{
   text-align: center;
-  margin:2em;
-  font-size:3em;
+  margin:0 1em;
+  font-size:4em;
   letter-spacing: -.025em;
+  position:absolute;
+  top:50%;
+  transform: translateY(-50%);
 }
 
 input[type="checkbox"]{
@@ -22,7 +26,9 @@ input[type="checkbox"]{
 }
 
 :checked + label{
-  background:#eee;
+  background:#000;
+  color:#fff;
+  border: 1px solid #000;
 }
 
 .inline-block{
@@ -34,4 +40,5 @@ input[type="checkbox"]{
   position:absolute;
   bottom:1em;
   right:1em;
+  font-weight:bold;
 }
