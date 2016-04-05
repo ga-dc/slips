@@ -14,6 +14,7 @@
   .module("slips", [])
   .controller("slipsController", function(){
     this.categories = Object.keys(slips)
+    this.currentSlip = "Slips."
     this.update = function(){
       this.slips = []
       for( var category in this.selected ){
