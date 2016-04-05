@@ -1,0 +1,18 @@
+label{
+  border: 1px solid #ccc;
+  padding: .25em .5em;
+  display:inline-block;
+}
+
+input[type="checkbox"]{
+  display:none;
+}
+
+:checked + label{
+  background:#ddd;
+}
+
+.inline-block{
+  display:inline-block;
+  margin: .25em;
+}

@@ -1,12 +1,13 @@
 <!doctype html>
 <html>
 <head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.min.js"></script>
-<script src="./slips.js"></script>
-<script src="./app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.min.js"></script>
+  <script src="./slips.js"></script>
+  <script src="./app.js"></script>
+  <link rel="stylesheet" type="text/css" href="./styles.css">
 </head>
 <body ng-app="slips" ng-controller="slipsController as vm" ng-keyup="vm.next($event)">
-<div ng-repeat="category in vm.categories">
+<div ng-repeat="category in vm.categories" class='inline-block'>
   <input type='checkbox' name='{{category}}' id='{{category}}' ng-model="vm.selected[category]" ng-change="vm.update()">
   <label for='{{category}}'>
     {{category}}
@@ -14,9 +15,8 @@
 </div>
 <h1>{{vm.currentSlip}}</h1>
 
-<div ng-show="vm.currentSlipIndex != undefined">
-{{vm.currentSlipIndex + 1}}/{{vm.slips.length}}
-</div>
-
+  <div ng-show="vm.currentSlipIndex != undefined">
+  {{vm.currentSlipIndex + 1}}/{{vm.slips.length}}
+  </div>
 </body>
 </html>
