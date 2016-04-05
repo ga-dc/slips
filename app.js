@@ -26,6 +26,7 @@
       this.currentSlipIndex = 0
     }
     this.next = function(e){
+      if(!this.slips.length) return
       if(e.keyCode === 37){
 	this.currentSlipIndex--
 	if(this.currentSlipIndex == -1) this.currentSlipIndex = this.slips.length - 1;
