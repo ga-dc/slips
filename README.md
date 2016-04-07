@@ -14,8 +14,3 @@ https://ga-dc.github.io/slips
 
 - suggested answers are provided in "answers" dir. One file per week.
 
-### Class rotation:
-
-- Squad members are pulled from garnet using squad leader names.
-  - Update squad leader names, in "index.html", via radio buttons under "#students_select".  
-
