@@ -10,6 +10,10 @@ var slips = {
   git: [
     "What's the difference between 'git commit' and 'git push'?",
     "Describe the difference between a fork and a branch.",
+    "Whiteboard the command(s) to create a new branch and swtich to it",
+    "How often should you commit?",
+    "Explain what a branch is in git.",
+    "If you meant to fork before you cloned, but instead cloned from the original repo you might have trouble pushing. How can you fix this?"
   ],
   "Misc":[
     "Describe what the DOM is and its importance in the web technology stack",
@@ -235,5 +239,6 @@ var slips = {
     "List the HTTP request verbs",
     "Explain what REST is and why we use it",
     "Distinguish between a route and a path",
+    "List the 5 HTTP request methods. How do they relate to the 4 crud actions?"
   ]
 }
