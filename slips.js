@@ -10,7 +10,7 @@ var slips = {
   git: [
     "What's the difference between 'git commit' and 'git push'?",
     "Describe the difference between a fork and a branch.",
-    "Whiteboard the command(s) to create a new branch and swtich to it",
+    "Whiteboard the command(s) to create a new branch and switch to it",
     "How often should you commit?",
     "Explain what a branch is in git.",
     "If you meant to fork before you cloned, but instead cloned from the original repo you might have trouble pushing. How can you fix this?"
