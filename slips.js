@@ -215,7 +215,6 @@ var slips = {
     "Describe what the DOM is and its importance in the web technology stack",
     "Explain the purpose of HTML attributes",
     "Describe the differences between the <head> and <body> tags",
-    "Describe how content other than HTML documents are organized and accessed on the web",
     "Create HTML elements using tags and attributes",
     "Create a well formed HTML document that nests elements within each other",
     "Include images on a webpage",
