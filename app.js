@@ -38,5 +38,8 @@
 	this.currentSlip = this.slips[this.currentSlipIndex]
       }
     }
+    this.toggleLight = function(){
+      document.body.classList.toggle("dark")
+    }
   })
 })()

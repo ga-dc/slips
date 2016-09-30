@@ -55,3 +55,20 @@ input[type="checkbox"]{
   right:1em;
   font-weight:bold;
 }
+
+.dark {
+  background: #000;
+  color:#fff;
+}
+
+.bulb{
+  position:absolute;
+  bottom:1em;
+  left:1em;
+  cursor:pointer;
+}
+
+:checked + label{
+  color:#000;
+  background:#fff;
+}
