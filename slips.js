@@ -23,7 +23,7 @@ var slips = {
     "What is the difference between 'git revert' and 'git reset'?",
     "How can I tell what files (changes) are staged at any given time?",
     "How do I delete a branch in Git?",
-    "What is a Pull Request?"
+    "What is a Pull Request?",
   ],
   "Misc":[
     "Describe what the DOM is and its importance in the web technology stack",
