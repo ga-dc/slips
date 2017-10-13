@@ -1,19 +1,29 @@
 var slips = {
   cli: [
     "Why would a developer prefer the command line over a GUI?",
-    "Write a command to list only files beginning with your first name and label the parts of the command",
+//     "Write a command to list only files beginning with your first name and label the parts of the command",
     "Where can we find help for shell commands?",
     "List 4 bash commands for managing folders and files",
+    "What is an example of a command that uses an option?",
     "Describe 2 unsafe commands",
     "What's the difference between absolute and relative paths?",
   ],
   git: [
+    "What does 'git add' do?",
     "What's the difference between 'git commit' and 'git push'?",
     "Describe the difference between a fork and a branch.",
     "Whiteboard the command(s) to create a new branch and switch to it",
     "How often should you commit?",
     "Explain what a branch is in git.",
-    "If you meant to fork before you cloned, but instead cloned from the original repo you might have trouble pushing. How can you fix this?"
+    "If you meant to fork before you cloned, but instead cloned from the original repo you might have trouble pushing. How can you fix this?",
+    "What is a remote in Git?",
+    "Write out the command to merge a branch called 'feature-branch' into the 'master' branch?",
+    "What is a merge conflict? How do you fix it?",
+    "How would I retrieve new commits from the 'master' branch of the 'origin' remote?",
+    "What is the difference between 'git revert' and 'git reset'?",
+    "How can I tell what files (changes) are staged at any given time?",
+    "How do I delete a branch in Git?",
+    "What is a Pull Request?"
   ],
   "Misc":[
     "Describe what the DOM is and its importance in the web technology stack",
