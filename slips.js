@@ -166,11 +166,11 @@ var slips = {
     "Define a function that takes a function as an argument and invokes the argument when the function is called.",
   ],
   "OOJS": [
-    "Write a JavaScript constructor function with at least one property and one method (e.g. a person). Create an instance.",
-    "What are constructor functions? How do we use them?",
-    "What is a prototype? Why do we care about them?",
-    "Describe how we use prototypes to set up inheritance in JS",
-    "What are constructor functions and the new keyword? How are they related?",
+    "Define a JavaScript class with at least one property and one method (e.g. a person). Create an instance.",
+    "What does the keyword `extends` do when dealing with classes in Javascript?",
+    "What does the keyword `super` do when dealing with classes in Javascript?"
+    "What are constructor functions and how to they relate to classes in JavaScript?",
+    "What is Object Oriented Programming?"
   ],
   "Ruby MVC": [
     "Write a Ruby class with an initialize method.",
