@@ -168,7 +168,7 @@ var slips = {
   "OOJS": [
     "Define a JavaScript class with at least one property and one method (e.g. a person). Create an instance.",
     "What does the keyword `extends` do when dealing with classes in Javascript?",
-    "What does the keyword `super` do when dealing with classes in Javascript?"
+    "What does the keyword `super` do when dealing with classes in Javascript?",
     "What are constructor functions and how to they relate to classes in JavaScript?",
     "What is Object Oriented Programming?"
   ],
