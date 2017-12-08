@@ -105,13 +105,25 @@ var slips = {
     "What does the HTML5 history api allow us to do?",
     "What is one problem that Single Page Applications face that traditional web apps don't?",
   ],
-  "Express": [
+  "Express & Mongoose": [
     "What is `npm`?",
-    "Write a get request using any path as you would in an express application.",
+    "What is 1 way Express and Sinatra are similar? What is 1 way they are different?",
+    "Write a get request using any path as you would in an Express application.",
+    "What is the difference between SQL and NoSQL?",    
     "How does `module.exports` help us with separation of concerns?",
-    "What action do you expect this route to perform: `app.post('/authors', function() {...}`?",
+    "Define a Mongoose schema for a Tweet that has an author, message and date created properties, with validations.",
+    "Is Express an MVC framework?",
+    "In SQL, we have tables and rows. What are their equivalents in NoSQL?",
+    "What are some of the advantages of NoSQL over SQL?",
+    "How do you install a 3rd party module with `npm`?",
+    "What is middleware in the context of an Express app? What kinds of things do we use middleware for?",
+    "What is an embeded document?",
+    "What is Body Parser? What do we use it for?",
+    "What action do you expect this route to perform: `app.post('/authors', function(req, res) {...}`?",
+    "What is Handlebars? Describe some of the key characteristics of its syntax.",
     "Explain the `req` and `res` variables in `app.get('/authors', function(req, res){...})`",
     "Write a root route that redirects to '/authors'.",
+    "How do we emulate `PUT` and `DELETE` requests in forms with Express?"
   ],
   "Sequelize": [
     "List 1 Sequelize method and its ActiveRecord counterpart.",
@@ -120,10 +132,12 @@ var slips = {
     "There are 3 different ways to set up your database tables in a Sequelize app. What are 2?",
   ],
   "APIs": [
-    "What is a API?",
+    "What is an API?",
     "Give an example of each JSON data structure.",
-    "Write the url to request all authors from a Rails app, formatted as JSON.",
-    "Write a Rails controller which supports html and json responses.",
+    "Write the url to request all authors from an API app",
+    "What is AJAX?",
+    "Write out a simple `GET` request using jQuery's `$.ajax()`",
+    "What is 'serializing'?"
   ],
   "RWD": [
     "Create a media query that supports most mobile phones.",
