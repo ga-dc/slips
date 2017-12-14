@@ -109,7 +109,7 @@ var slips = {
     "What is `npm`?",
     "What is 1 way Express and Sinatra are similar? What is 1 way they are different?",
     "Write a get request using any path as you would in an Express application.",
-    "What is the difference between SQL and NoSQL?",    
+    "What is the difference between SQL and NoSQL?",
     "How does `module.exports` help us with separation of concerns?",
     "Define a Mongoose schema for a Tweet that has an author, message and date created properties, with validations.",
     "Is Express an MVC framework?",
@@ -263,5 +263,11 @@ var slips = {
     "Explain what REST is and why we use it",
     "Distinguish between a route and a path",
     "List the 5 HTTP request methods. How do they relate to the 4 crud actions?"
+  ],
+  "React": [
+    "What is a React component and why is it useful?",
+    "Explain what the 'Virtual DOM' is",
+    "What is the difference between props and state?",
+    "What one method does every component require?"
   ]
 }
