@@ -1,7 +1,6 @@
 var slips = {
   cli: [
     "Why would a developer prefer the command line over a GUI?",
-//     "Write a command to list only files beginning with your first name and label the parts of the command",
     "Where can we find help for shell commands?",
     "List 4 bash commands for managing folders and files",
     "What is an example of a command that uses an option?",
@@ -107,7 +106,6 @@ var slips = {
   ],
   "Express & Mongoose": [
     "What is `npm`?",
-    "What is 1 way Express and Sinatra are similar? What is 1 way they are different?",
     "Write a get request using any path as you would in an Express application.",
     "What is the difference between SQL and NoSQL?",
     "How does `module.exports` help us with separation of concerns?",
@@ -123,7 +121,11 @@ var slips = {
     "What is Handlebars? Describe some of the key characteristics of its syntax.",
     "Explain the `req` and `res` variables in `app.get('/authors', function(req, res){...})`",
     "Write a root route that redirects to '/authors'.",
-    "How do we emulate `PUT` and `DELETE` requests in forms with Express?"
+    "How do we emulate `PUT` and `DELETE` requests in forms with Express?",
+    "If I have a model `Teachers`, how can I get all instances of Teachers using mongoose?",
+    "How would I access an ID of an Artist if my router starts like this `router.get('artist/:id'...)`?",
+    "What is the common name for the file I can run to restart my database with my initial data",
+    "What does this method `app.use(express.static('public'))` do ?"
   ],
   "Sequelize": [
     "List 1 Sequelize method and its ActiveRecord counterpart.",
@@ -136,8 +138,10 @@ var slips = {
     "Give an example of each JSON data structure.",
     "Write the url to request all authors from an API app",
     "What is AJAX?",
-    "Write out a simple `GET` request using jQuery's `$.ajax()`",
-    "What is 'serializing'?"
+    "Write out a simple `GET` request using `fetch`",
+    "What is 'serializing'?",
+    "Explain the concept of a Promise",
+    "When using `fetch`, what is the difference between `.then()`, `.catch()`, and `.finally()`"
   ],
   "RWD": [
     "Create a media query that supports most mobile phones.",
