@@ -125,7 +125,8 @@ var slips = {
     "If I have a model `Teachers`, how can I get all instances of Teachers using mongoose?",
     "How would I access an ID of an Artist if my router starts like this `router.get('artist/:id'...)`?",
     "What is the common name for the file I can run to restart my database with my initial data",
-    "What does this method `app.use(express.static('public'))` do ?"
+    "What does this method `app.use(express.static('public'))` do ?",
+    "Give an example of two useful npms that can help in express"
   ],
   "Sequelize": [
     "List 1 Sequelize method and its ActiveRecord counterpart.",
@@ -135,7 +136,7 @@ var slips = {
   ],
   "APIs": [
     "What is an API?",
-    "Give an example of each JSON data structure.",
+    "Give an example of JSON data structure.",
     "Write the url to request all authors from an API app",
     "What is AJAX?",
     "Write out a simple `GET` request using `fetch`",
